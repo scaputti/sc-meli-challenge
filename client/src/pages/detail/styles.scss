@@ -1,0 +1,96 @@
+@use '../../styles/variables.scss' as v;
+
+.product-detail {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-areas: "a b" "c c";
+  gap: 18px;
+  grid-column: 2/12;
+  background: v.$white;
+  padding: 0 v.$padding32 0;
+
+  .thumbnail {
+    width: 100%;
+    height: 680px;
+    object-fit: contain;
+    grid-area: a;
+    grid-column: 1/8;
+  }
+
+  .buy {
+    display: flex;
+    flex-direction: column;
+    grid-area: b;
+    grid-column: 8/11;
+
+    .condition {
+      font-size: v.$fontSize14;
+      padding: v.$padding32 0 v.$padding16;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: v.$fontSize24;
+    }
+
+    .price {
+      font-size: v.$fontSize46;
+      padding: v.$padding32 0;
+    }
+
+    .btn-buy {
+      color: v.$white;
+      background: v.$blue;
+      font-size: v.$fontSize14;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      padding: 15px 32px;
+      text-decoration: none;
+      margin-right: 32px;
+    }
+  }
+
+  .product-descr {
+    display: flex;
+    flex-direction: column;
+    padding-left: v.$padding32;
+    grid-area: c;
+    grid-column: 1/8;
+
+    .title {
+      width: 100%;
+      font-size: v.$fontSize28;
+      padding-top: v.$padding16;
+    }
+
+    .text {
+      font-size: v.$fontSize16;
+      padding: v.$padding32 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .product-detail {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    grid-column: 1/7;
+    grid-template-areas: "a" "b" "c";
+
+    .thumbnail {
+      width: 100%;
+      height: auto;
+      grid-column: 1/7;
+    }
+
+    .buy {
+      grid-column: 1/7;
+    }
+
+    .product-descr {
+      grid-column: 1/7;
+      padding-left: 0;
+    }
+  }
+}

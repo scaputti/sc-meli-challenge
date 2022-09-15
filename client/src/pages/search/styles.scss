@@ -1,0 +1,13 @@
+@use '../../styles/variables.scss' as v;
+
+.results {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2/12;
+}
+
+@media (max-width: 768px) {
+  .results {
+    grid-column: 1/7;
+  }
+}

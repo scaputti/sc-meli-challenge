@@ -1,0 +1,76 @@
+@use '../../styles/variables.scss' as v;
+
+.items-card {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  margin: 0 auto;
+  width: calc(100% - 32px);
+  gap: 18px;
+  padding: v.$padding16;
+  height: 180px;
+  background: v.$white;
+  position: relative;
+  text-decoration: none;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+  }
+
+  .thumbnail {
+    width: 100%;
+    object-fit: cover;
+    height: 180px;
+    background: v.$grayLight;
+    margin-right: 12px;
+    border-radius: 4px;
+    grid-column: 1/3;
+  }
+
+  .item-detail {
+    text-align: initial;
+    display: flex;
+    flex-direction: column;
+    grid-column: 3/9;
+    color: v.$grayDark;
+
+    .price {
+      font-size: v.$fontSize24;
+      padding: v.$padding16 0 v.$padding32;
+    }
+
+    .shipping {
+      margin-left: 10px;
+      
+      img {
+        height: 15px;
+      }
+    }
+
+    .description {
+      font-size: v.$fontSize18;
+    }
+  }
+
+  .place {
+    font-size: v.$fontSize12;
+    color: v.$grayMedium;
+    padding-top: v.$padding32;
+    grid-column: 9/11;
+  }
+
+}
+
+.items-card:after {
+  content : "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  width: calc(100% - 50px);
+  border-bottom:1px solid v.$grayLight;
+  margin: 0 auto;
+}
+
+

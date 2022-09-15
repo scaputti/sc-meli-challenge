@@ -1,0 +1,30 @@
+@use '../../styles/variables.scss' as v;
+
+nav {
+  width: 100%;
+  height: 60px;
+  background: v.$yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  max-width: 1280px;
+  margin: 0 auto 50px;
+  gap: 18px;
+  row-gap: 0;
+  background: v.$grayLight;
+};
+
+@media (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    padding: 0 15px;
+    row-gap: 0;
+  }
+};
+

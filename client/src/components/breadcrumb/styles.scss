@@ -1,0 +1,30 @@
+@use '../../styles/variables.scss' as v;
+
+.breadcrumb {
+  font-size: v.$fontSize14;
+  text-align: initial;
+  padding: v.$padding16 0;
+  color: v.$gray;
+  background: v.$grayLight;
+  grid-column: 2/12;
+  text-transform: none;
+
+  li, a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  li + li:before {
+    content: " >";
+    padding: 0 10px;
+    color: #999;
+  }
+}
+
+@media (max-width: 768px) {
+  .breadcrumb {
+    grid-column: 1/7;
+    margin: 0;
+  }
+}

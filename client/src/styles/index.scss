@@ -1,0 +1,11 @@
+@use '../../styles/variables.scss' as v;
+
+body {
+  font-family: sans-serif;
+  background: v.$grayLight;
+}
+
+* {
+  margin:0; 
+  padding:0;
+}
