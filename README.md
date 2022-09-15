@@ -21,18 +21,18 @@ npm run dev
 
 ```
 # Home 
-https://localhost:3000/
+[http://localhost:3000](http://localhost:3000)
 
 # Search results
-https://localhost:3000/items
+[http://localhost:3000/items](http://localhost:3000/items)
 
 # Product detail
-https://localhost:3000/items/:id
+[http://localhost:3000/items/:id](http://localhost:3000/items/:id)
 
 # API Search
-https://localhost:3000/items/
+[http://localhost:5000/items](http://localhost:5000/items)
 
 # API Detail - Example
-https://localhost:3000/items/MLA1166899522
+[http://localhost:5000/items/MLA1166899522](http://localhost:5000/items/MLA1166899522)
 ```
 
