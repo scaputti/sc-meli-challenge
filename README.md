@@ -19,20 +19,20 @@ npm run dev
 
 ## Endpoints 
 
-```
-# Home 
+
+### Home 
 [http://localhost:3000](http://localhost:3000)
 
-# Search results
+### Search results
 [http://localhost:3000/items](http://localhost:3000/items)
 
-# Product detail
+### Product detail
 [http://localhost:3000/items/:id](http://localhost:3000/items/:id)
 
-# API Search
+### API Search
 [http://localhost:5000/items](http://localhost:5000/items)
 
-# API Detail - Example
+### API Detail - Example
 [http://localhost:5000/items/MLA1166899522](http://localhost:5000/items/MLA1166899522)
-```
+
 
